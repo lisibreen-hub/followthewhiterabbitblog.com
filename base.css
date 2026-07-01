@@ -102,12 +102,12 @@ button {
   margin: 0;
 }
 
-.home .hero-image img {
-  width: 80%;
-  max-width: 1000px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 12px;
+.home .hero-image img { 
+  width: 100%; 
+  max-width: 1000px; 
+  height: auto; 
+  object-fit: cover; 
+  border-radius: 12px; 
 }
 
 .home .intro {
