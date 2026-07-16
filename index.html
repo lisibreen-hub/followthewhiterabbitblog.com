@@ -13,9 +13,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Viaoda+Libre&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="base.css">
-</head>
 
-<body class="home"></body>
+<body class="home">
 
 <div class="nav">
 
@@ -31,8 +30,6 @@
   </div>
 </div>
 
-
-</div>
 
 <div class="hero"></div>
 
@@ -84,13 +81,15 @@
           <img src="fires.jpg"
                alt="Cover of Between Two Fires by Christopher Buehlman"
                class="book-img">
+         </a>
 
          <a href="readme.html#screwtape">
           <img src="screwtape.jpg"
                alt="Cover of The Screwtape Letters"
                class="book-img">
         </a>
-             <a href="readme.html#familiar">
+
+        <a href="readme.html#familiar">
           <img src="familiar.jpg"
                alt="Cover of The Familiar"
                class="book-img">
@@ -109,8 +108,6 @@
                class="book-img">
         </a>
 
-        </a>
-
       </div>
 
       <button onclick="moveSlide(1)" aria-label="Next books">❯</button>
@@ -120,20 +117,17 @@
 
 </div>
 
-<script>
-function moveSlide(direction) {
-  const slider = document.getElementById("slider");
 
-  if (direction === 1) {
-    slider.appendChild(slider.firstElementChild);
-  } else {
-    slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
-  }
+<!-- Subscribe Bubble -->
 
-      <button class="subscribe-bubble" onclick="openSubscribe()">
+<button class="subscribe-bubble" onclick="openSubscribe()">
   🐇 Follow the Rabbit
 </button>
-    <div class="subscribe-popup" id="subscribePopup">
+
+
+<!-- Subscribe Popup -->
+
+<div class="subscribe-popup" id="subscribePopup">
 
   <div class="subscribe-box">
 
@@ -158,9 +152,32 @@ function moveSlide(direction) {
   </div>
 
 </div>
+
+
+<script>
+
+function moveSlide(direction) {
+  const slider = document.getElementById("slider");
+
+  if (direction === 1) {
+    slider.appendChild(slider.firstElementChild);
+  } else {
+    slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
+  }
 }
-  
+
+
+function openSubscribe() {
+  document.getElementById("subscribePopup").style.display = "flex";
+}
+
+
+function closeSubscribe() {
+  document.getElementById("subscribePopup").style.display = "none";
+}
+
 </script>
+
 
 </body>
 </html>
